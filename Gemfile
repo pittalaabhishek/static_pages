@@ -66,3 +66,7 @@ gem "rubocop", require: false
 gem "rubocop-rails", require: false  # For Rails-specific linting
 
 gem "syntax_tree", require: false
+
+gem "minitest-reporters"
+gem "guard"
+gem "guard-minitest" # Add this for Minitest integration
