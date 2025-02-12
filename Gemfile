@@ -61,3 +61,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "rubocop", require: false
+gem "rubocop-rails", require: false  # For Rails-specific linting
+
+gem "syntax_tree", require: false
