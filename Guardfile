@@ -93,4 +93,3 @@ def integration_tests(resource = :all)
     Dir["test/integration/#{resource}_*.rb"]
   end
 end
-
