@@ -63,6 +63,14 @@ group :test do
   gem 'webdrivers', '4.1.2'
 end
 
+group :development, :test do
+  gem 'minitest-reporters'
+end
+
 # group :production do
 #   gem 'pg', '1.1.4'
 # end
+
+gem 'rexml'
+gem 'bcrypt', '~> 3.1.13'
+
