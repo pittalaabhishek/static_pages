@@ -75,4 +75,4 @@ gem "bootstrap", "~> 5.3.0"
 gem "sprockets", "~> 3.7.2"
 # gem "sassc-rails"
 gem "cssbundling-rails"
-
+gem 'rails-controller-testing'
