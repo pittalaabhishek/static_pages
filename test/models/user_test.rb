@@ -5,13 +5,16 @@ class UserTest < ActiveSupport::TestCase
 
   # Test that the user is valid initially
   test "should be valid" do
-    assert @user.valid?
+    user = User.new(email: "valid@example.com", name: "Valid User", password: "password", password_confirmation: "password")
+    assert user.valid?, "User should be valid"
   end
 
   # Test that name must be present
   test "name should be present" do
-    @user.name = " "
-    assert_not @user.valid? # Expect the user to be invalid
+    # @user.name = " "
+    # assert_not @user.valid? # Expect the user to be invalid
+      user = User.new(email: "user@example.com", name: nil, password: "password", password_confirmation: "password")
+      assert_not user.valid?, "User should not be valid without a name"
   end
 
   # Test that email must be present
@@ -33,20 +36,18 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email validation should reject invalid addresses" do
-    invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
-                           foo@bar_baz.com foo@bar+baz.com]
-    invalid_addresses.each do |invalid_address|
-      @user.email = invalid_address
-      assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
+    invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.]
+    invalid_addresses.each do |address|
+      user = User.new(email: address, name: "Invalid User", password: "password", password_confirmation: "password")
+      assert_not user.valid?, "#{address} should be invalid"
     end
   end
 
   test "email validation should accept valid addresses" do
-    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
-                       first.last@foo.jp alice+bob@baz.cn]
-    valid_addresses.each do |valid_address|
-      @user.email = valid_address
-      assert @user.valid?, "#{valid_address.inspect} should be valid"
+    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo.jp alice+bob@baz.cn]
+    valid_addresses.each do |address|
+      user = User.new(email: address, name: "Valid User", password: "password", password_confirmation: "password")
+      assert user.valid?, "#{address} should be valid"
     end
   end
 

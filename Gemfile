@@ -72,5 +72,6 @@ end
 # end
 
 gem 'rexml'
-gem 'bcrypt', '~> 3.1.13'
+gem 'bcrypt', '~> 3.1.7'
+gem 'sass-rails'
 
