@@ -1,9 +1,20 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   name: MyString
   email: MyString
 
 two:
   name: MyString
   email: MyString
+=======
+  name: "user1@example.com"
+  email: "User One"
+  password_digest: <%= BCrypt::Password.create('password') %>
+
+two:
+  name: "user2@example.com"
+  email: "User Two"
+  password_digest: <%= BCrypt::Password.create('password') %>
+>>>>>>> toy_app/main

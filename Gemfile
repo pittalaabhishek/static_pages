@@ -76,3 +76,18 @@ gem "sprockets", "~> 3.7.2"
 # gem "sassc-rails"
 gem "cssbundling-rails"
 gem 'rails-controller-testing'
+  gem 'webdrivers', '4.1.2'
+end
+
+group :development, :test do
+  gem 'minitest-reporters'
+end
+
+# group :production do
+#   gem 'pg', '1.1.4'
+# end
+
+gem 'rexml'
+gem 'bcrypt', '~> 3.1.7'
+gem 'sass-rails'
+

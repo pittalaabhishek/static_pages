@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: "This is the first micropost"
+  user_id: 1
+
+two:
+  content: "This is the second micropost"
+  user_id: 2

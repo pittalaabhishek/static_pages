@@ -1,10 +1,15 @@
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
+<<<<<<< HEAD
 require "minitest/reporters"
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 
+=======
+require 'minitest/reporters'
+Minitest::Reporters.use!(Minitest::Reporters::SpecReporter.new)
+>>>>>>> toy_app/main
 
 module ActiveSupport
   class TestCase
@@ -16,4 +21,8 @@ module ActiveSupport
 
     # Add more helper methods to be used by all tests here...
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> toy_app/main
