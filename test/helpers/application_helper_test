@@ -1,0 +1,11 @@
+require 'test_helper'
+
+class ApplicationHelperTest < ActionView::TestCase
+  test "full title helper" do
+    # Test the default title
+    assert_equal full_title, "Ruby on Rails Tutorial Sample App"
+
+    # Test with a custom title
+    assert_equal full_title("About"), "Help | Ruby on Rails Tutorial Sample App"
+  end
+end

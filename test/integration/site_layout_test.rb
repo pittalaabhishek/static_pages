@@ -15,5 +15,3 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", contact_path       # Contact page link
   end
 end
-
-
