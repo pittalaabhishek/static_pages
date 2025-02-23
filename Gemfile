@@ -71,7 +71,7 @@ gem "guard"
 gem "guard-minitest" # Add this for Minitest integration
 
 gem "bootstrap", "~> 5.3.0"
-gem "sprockets", "~> 3.7.2"
+gem "sprockets", "~> 4.2.1"
 # gem "bootstrap-sprockets"
 # gem "sassc-rails"
 gem "cssbundling-rails"
