@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+  resources :microposts
+  resources :users, only: [:index, :show, :new, :create, :edit, :update]
+
   get "static_pages/home", as: :home
   get "static_pages/help", to: "static_pages#help", as: :help
   get 'static_pages/about', to: 'static_pages#about', as: :about
   get 'static_pages/contact', to: "static_pages#contact", as: :contact
+  get 'signup', to: 'users#new'
+  post 'signup', to: 'users#create'
 
   root 'static_pages#home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

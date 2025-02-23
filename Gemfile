@@ -67,17 +67,16 @@ gem "rubocop-rails", require: false  # For Rails-specific linting
 
 gem "syntax_tree", require: false
 
-gem "minitest-reporters"
 gem "guard"
 gem "guard-minitest" # Add this for Minitest integration
 
 gem "bootstrap", "~> 5.3.0"
 gem "sprockets", "~> 3.7.2"
+# gem "bootstrap-sprockets"
 # gem "sassc-rails"
 gem "cssbundling-rails"
 gem 'rails-controller-testing'
   gem 'webdrivers', '4.1.2'
-end
 
 group :development, :test do
   gem 'minitest-reporters'
@@ -90,4 +89,5 @@ end
 gem 'rexml'
 gem 'bcrypt', '~> 3.1.7'
 gem 'sass-rails'
+gem 'sassc-rails'
 

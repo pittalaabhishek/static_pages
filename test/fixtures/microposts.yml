@@ -7,3 +7,7 @@ one:
 two:
   content: "This is the second micropost"
   user_id: 2
+
+orcl:
+  content: "I just ate an orange!"
+  user: michael

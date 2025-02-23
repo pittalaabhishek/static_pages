@@ -15,9 +15,17 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # test "should create micropost" do
+  #   assert_difference("Micropost.count") do
+  #     post microposts_url, params: { micropost: { content: "New micropost content", user_id: @micropost.user_id } }
+  #   end
+
+  #   assert_redirected_to micropost_url(Micropost.last)
+  # end
+
   test "should create micropost" do
-    assert_difference("Micropost.count") do
-      post microposts_url, params: { micropost: { content: "New micropost content", user_id: @micropost.user_id } }
+    assert_difference('Micropost.count') do
+      post microposts_url, params: { micropost: { content: "New micropost content", user_id: @user.id } }
     end
 
     assert_redirected_to micropost_url(Micropost.last)
