@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   get 'static_pages/contact', to: "static_pages#contact", as: :contact
   get 'signup', to: 'users#new'
   post 'signup', to: 'users#create'
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
   root 'static_pages#home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
