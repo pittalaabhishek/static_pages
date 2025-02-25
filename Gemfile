@@ -90,4 +90,11 @@ gem 'rexml'
 gem 'bcrypt', '~> 3.1.7'
 gem 'sass-rails'
 gem 'sassc-rails'
+gem 'faker', '3.5.1'
 
+gem 'will_paginate', '~> 3.3.1'
+# gem 'bootstrap-will_paginate', '~> 1.0.0'
+# gem 'webpacker'
+
+
+gem "jsbundling-rails", "~> 1.3"

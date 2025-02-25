@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get "sessions/new"
   resources :microposts
-  resources :users, only: [:index, :show, :new, :create, :edit, :update]
+  resources :users, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 
   get "static_pages/home", as: :home
   get "static_pages/help", to: "static_pages#help", as: :help
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post 'signup', to: 'users#create'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
-  delete 'logout', to: 'sessions#destroy'
+  delete 'logout', to: 'sessions#destroy', as: :logout
 
   root 'static_pages#home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
