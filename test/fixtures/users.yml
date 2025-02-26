@@ -7,6 +7,8 @@ michael:
   admin: true
   activated: true
   activated_at: <%= Time.zone.now %> 
+  reset_digest: <%= User.digest(SecureRandom.urlsafe_base64) %>
+  reset_sent_at: <%= 1.hour.ago %>
 
 one:
   name: User One
