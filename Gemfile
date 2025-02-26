@@ -71,10 +71,9 @@ gem "guard"
 gem "guard-minitest" # Add this for Minitest integration
 
 gem "bootstrap", "~> 5.3.0"
-gem "sprockets", "~> 3.7.2"
+# gem "sprockets", "~> 3.7.2"
 # gem "bootstrap-sprockets"
 # gem "sassc-rails"
-gem "cssbundling-rails"
 gem 'rails-controller-testing'
   gem 'webdrivers', '4.1.2'
 
@@ -90,4 +89,7 @@ gem 'rexml'
 gem 'bcrypt', '~> 3.1.7'
 gem 'sass-rails'
 gem 'sassc-rails'
-
+gem 'faker', '3.5.1'
+# gem 'bootstrap-sass', '~> 3.4'
+gem 'will_paginate', '~> 3.3'
+# gem 'bootstrap-will_paginate', '1.0.0'
