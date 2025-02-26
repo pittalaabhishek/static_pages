@@ -3,6 +3,7 @@ class User < ApplicationRecord
   before_save :downcase_email
   before_create :create_activation_digest
   has_secure_password
+  has_many :microposts, dependent: :destroy
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -18,6 +19,10 @@ class User < ApplicationRecord
     BCrypt::Engine.cost
     
     BCrypt::Password.create(string, cost: cost)
+  end
+
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 
   # Returns true if a password reset has expired.

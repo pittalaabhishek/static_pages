@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   # GET /users/1 or /users/1.json
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   # GET /users/new
@@ -51,12 +52,6 @@ class UsersController < ApplicationController
     end
   end  
 
-  # DELETE /users/1 or /users/1.json
-  # def destroy
-  #   User.find(params[:id]).destroy
-  #   flash[:success] = "User deleted"
-  #   redirect_to users_url
-  # end
   def destroy
     @user = User.find(params[:id])
     if current_user.admin? && !current_user?(@user)
@@ -79,14 +74,6 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password,
       :password_confirmation)
-    end
-
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
     end
 
     # Confirms the correct user.
