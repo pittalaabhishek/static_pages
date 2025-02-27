@@ -75,7 +75,7 @@ gem "bootstrap", "~> 5.3.0"
 # gem "bootstrap-sprockets"
 # gem "sassc-rails"
 gem "rails-controller-testing"
-  gem "webdrivers", "4.1.2"
+  gem "webdrivers", "5.3.1"
 
 group :development, :test do
   gem "minitest-reporters"
