@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :following, :followers]
-  before_action :correct_user, only: [:edit, :update]
+  before_action :logged_in_user, only: [ :index, :edit, :update, :destroy, :following, :followers ]
+  before_action :correct_user, only: [ :edit, :update ]
   before_action :admin_user, only: :destroy
 
   # GET /users or /users.json
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
       flash[:info] = "Please check your email to activate your account."
       redirect_to root_url
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -41,14 +41,14 @@ class UsersController < ApplicationController
     @title = "Following"
     @user = User.find(params[:id])
     @users = @user.following.paginate(page: params[:page])
-    render 'show_follow'
+    render "show_follow"
   end
-  
+
   def followers
     @title = "Followers"
     @user = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page])
-    render 'show_follow'
+    render "show_follow"
   end
 
   # Confirms an admin user.
@@ -60,11 +60,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to @user, notice: 'User was successfully updated.'
+      redirect_to @user, notice: "User was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
-  end  
+  end
 
   def destroy
     @user = User.find(params[:id])
@@ -94,5 +94,4 @@ class UsersController < ApplicationController
     def correct_user
       redirect_to(root_url) unless current_user?(@user)
     end
-  
 end

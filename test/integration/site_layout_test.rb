@@ -6,7 +6,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     get root_path
 
     # Step 2: Verify the correct template is rendered
-    assert_template 'static_pages/home'
+    assert_template "static_pages/home"
 
     # Step 3: Check for correct links
     assert_select "a[href=?]", root_path, count: 2  # Two links to Home (logo + navbar)

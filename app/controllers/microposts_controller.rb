@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :logged_in_user, only: [ :create, :destroy ]
   before_action :correct_user, only: :destroy
 
   def create
@@ -10,7 +10,7 @@ class MicropostsController < ApplicationController
       redirect_to root_url
     else
       @feed_items = current_user.feed.paginate(page: params[:page], per_page: 10)
-      render 'static_pages/home'
+      render "static_pages/home"
     end
   end
 

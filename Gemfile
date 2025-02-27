@@ -74,28 +74,28 @@ gem "bootstrap", "~> 5.3.0"
 # gem "sprockets", "~> 3.7.2"
 # gem "bootstrap-sprockets"
 # gem "sassc-rails"
-gem 'rails-controller-testing'
-  gem 'webdrivers', '4.1.2'
+gem "rails-controller-testing"
+  gem "webdrivers", "4.1.2"
 
 group :development, :test do
-  gem 'minitest-reporters'
+  gem "minitest-reporters"
 end
 
 # group :production do
 #   gem 'pg', '1.1.4'
 # end
 
-gem 'rexml'
-gem 'bcrypt', '~> 3.1.7'
-gem 'sass-rails'
-gem 'sassc-rails'
-gem 'faker', '3.5.1'
+gem "rexml"
+gem "bcrypt", "~> 3.1.7"
+gem "sass-rails"
+gem "sassc-rails"
+gem "faker", "3.5.1"
 # gem 'bootstrap-sass', '~> 3.4'
 # gem 'dartsass-rails', '0.5.1'
-gem 'will_paginate', '~> 3.3'
+gem "will_paginate", "~> 3.3"
 # gem 'bootstrap-will_paginate', '1.0.0'
 
 # gem "dartsass-rails", "~> 0.5.1"
-gem 'active_storage_validations'
-gem 'image_processing', '1.9.3'
-gem 'mini_magick', '4.9.5'
+gem "active_storage_validations"
+gem "image_processing", "1.9.3"
+gem "mini_magick", "4.9.5"

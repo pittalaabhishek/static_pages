@@ -12,8 +12,8 @@ class UserTest < ActiveSupport::TestCase
 
   # Test that name must be present
   test "name should be present" do
-    # @user.name = " "
-    # assert_not @user.valid? # Expect the user to be invalid
+      # @user.name = " "
+      # assert_not @user.valid? # Expect the user to be invalid
       user = User.new(email: "user@example.com", name: nil, password: "password", password_confirmation: "password")
       assert_not user.valid?, "User should not be valid without a name"
   end
@@ -60,13 +60,13 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "authenticated? should return false for a user with nil digest" do
-    assert_not @user.authenticated?(:remember, '')
+    assert_not @user.authenticated?(:remember, "")
   end
 
   test "associated microposts should be destroyed" do
     @user.save
     @user.microposts.create!(content: "Lorem ipsum")
-    assert_difference 'Micropost.count', -1 do
+    assert_difference "Micropost.count", -1 do
       @user.destroy
     end
   end
@@ -103,5 +103,4 @@ class UserTest < ActiveSupport::TestCase
       assert_not michael.feed.include?(post_unfollowed)
     end
   end
-
 end
