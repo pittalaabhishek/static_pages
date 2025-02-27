@@ -92,7 +92,7 @@ gem "sassc-rails"
 gem "faker", "3.5.1"
 # gem 'bootstrap-sass', '~> 3.4'
 # gem 'dartsass-rails', '0.5.1'
-gem "will_paginate", "~> 3.3"
+gem "will_paginate", "~> 4.0"
 # gem 'bootstrap-will_paginate', '1.0.0'
 
 # gem "dartsass-rails", "~> 0.5.1"
