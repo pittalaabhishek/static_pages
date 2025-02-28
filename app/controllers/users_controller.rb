@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include SessionsHelper
   before_action :set_user, only: %i[ show edit update destroy ]
   before_action :logged_in_user, only: [ :index, :edit, :update, :destroy, :following, :followers ]
   before_action :correct_user, only: [ :edit, :update ]
@@ -59,6 +60,9 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1 or /users/1.json
   def update
     @user = User.find(params[:id])
+    if !logged_in?
+      redirect_to login_url
+    end
     if @user.update(user_params)
       redirect_to @user, notice: "User was successfully updated."
     else
@@ -68,7 +72,8 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    if current_user.admin? && !current_user?(@user)
+    # byebug
+    if current_user.admin?
       @user.destroy
       flash[:success] = "User deleted"
       redirect_to users_url

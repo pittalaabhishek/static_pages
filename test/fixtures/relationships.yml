@@ -8,6 +8,10 @@ relationship_2:
   follower: michael
   followed: lana
 
+one:
+  follower_id: 1
+  followed_id: 2
+
 two:
   follower: michael
   followed: malory
