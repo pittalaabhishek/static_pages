@@ -6,8 +6,6 @@
     box-sizing: border-box;
 }
 
-$gray-medium-light: #eaeaea;
-
 /* header */
 #logo {
     float: left;
@@ -246,7 +244,7 @@ aside {
     }
 
     .timestamp {
-        color: $gray-light;
+        color: black;
         display: block;
         margin-left: 60px;
     }
@@ -275,7 +273,7 @@ aside {
     a {
         float: left;
         padding: 0 10px;
-        border-left: 1px solid $gray-lighter;
+        border-left: 1px solid black;
 
         &:first-child {
             padding-left: 0;
