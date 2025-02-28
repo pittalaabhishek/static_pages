@@ -156,9 +156,9 @@ GEM
       minitest (>= 3.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    image_processing (1.9.3)
-      mini_magick (>= 4.9.5, < 5)
-      ruby-vips (>= 2.0.13, < 3)
+    image_processing (1.14.0)
+      mini_magick (>= 4.9.5, < 6)
+      ruby-vips (>= 2.0.17, < 3)
     importmap-rails (2.1.0)
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
@@ -485,7 +485,7 @@ DEPENDENCIES
   faker (= 3.5.1)
   guard
   guard-minitest
-  image_processing (= 1.9.3)
+  image_processing (= 1.14.0)
   importmap-rails
   jbuilder
   kamal

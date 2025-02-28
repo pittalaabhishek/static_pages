@@ -97,6 +97,6 @@ gem "will_paginate", "~> 3.3"
 
 # gem "dartsass-rails", "~> 0.5.1"
 gem "active_storage_validations"
-gem "image_processing", "1.9.3"
+gem "image_processing", "1.14.0"
 gem "mini_magick", "4.9.5"
 gem "byebug"
